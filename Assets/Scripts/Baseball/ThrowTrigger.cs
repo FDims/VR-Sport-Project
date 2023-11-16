@@ -26,7 +26,7 @@ public class ThrowTrigger : MonoBehaviour
         initialButtonPosition = buttonVisual.localPosition;
         UpdateVisual();
     }
-
+    
     void PressButton(XRBaseInteractor interactor)
     {
         isPressed = true;
