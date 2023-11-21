@@ -5,8 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    public void BaseballBtn() {
-        SceneManager.LoadScene("Baseball_scene");
-        
+    [SerializeField] private GameObject BaseballPopUp = null;
+    [SerializeField] private GameObject BowlingPopUp = null;
+
+     public void Start() {
+        DeactivatePopUp();
+     }
+    
+    public void ActivatePopUp(GameObject PopUp) {
+        DeactivatePopUp();
+
+        PopUp.SetActive(true);
     }
+
+    public void DeactivatePopUp(){
+        BaseballPopUp.SetActive(false);
+        BowlingPopUp.SetActive(false);
+
+    }
+
+    public void SceneLoader(string SceneNumber){
+        SceneManager.LoadScene(SceneNumber);
+    }
+
 }
