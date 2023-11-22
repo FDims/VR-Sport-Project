@@ -10,10 +10,7 @@ public class ThrowerController : MonoBehaviour
     [SerializeField] private Rigidbody baseballPrefab; // Prefab of the baseball object
     [SerializeField] private float throwForce = 10f; // Force applied to the baseball
 
-    public void ThrowDelay(){
-        Invoke("ThrowBaseball", 3f);
-    }
-    void ThrowBaseball()
+    public void ThrowBaseball()
     {
         Rigidbody baseballInstance = Instantiate(baseballPrefab, launchPoint.position, launchPoint.rotation);
         baseballInstance.AddForce(launchPoint.forward * throwForce, ForceMode.Impulse);
