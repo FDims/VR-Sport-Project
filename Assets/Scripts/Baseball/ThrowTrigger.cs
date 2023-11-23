@@ -7,6 +7,7 @@ public class ThrowTrigger : MonoBehaviour
 {
     public bool isActivated = false; // Initial state of the button
     [SerializeField] GameObject thrower;
+    [SerializeField] GameObject switch;
     [SerializeField] private float delayWindow = 5f;
 
     private ThrowerController throwerController;
@@ -31,6 +32,16 @@ public class ThrowTrigger : MonoBehaviour
     public void PressButton()
     {
         isActivated = !isActivated;
+        if (isActivated)
+        {
+            switch.Transform.Rotate(-30f,0f,0f,Space.Self);
+        }
+        else
+        {
+            switch.Transform.Rotate(30f, 0f, 0f, Space.Self);
+        }
     }
+
+
 
 }
