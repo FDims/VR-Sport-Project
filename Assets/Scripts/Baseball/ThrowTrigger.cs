@@ -26,7 +26,6 @@ public class ThrowTrigger : MonoBehaviour
         {
             timeDelay = delayWindow;
             throwerController.ThrowBaseball();
-            testSwitch();
         }
     }
 
