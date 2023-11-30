@@ -24,7 +24,7 @@ public class MenuController : MonoBehaviour
 
     }
 
-    public void SceneLoader(string SceneNumber){
+    public void SceneLoader(int SceneNumber){
         SceneManager.LoadScene(SceneNumber);
     }
 
