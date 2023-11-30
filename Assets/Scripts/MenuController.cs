@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] private GameObject BaseballPopUp = null;
     [SerializeField] private GameObject BowlingPopUp = null;
+    [SerializeField] private GameObject ShootingPopUp = null;
 
      public void Start() {
         DeactivatePopUp();
@@ -21,6 +22,7 @@ public class MenuController : MonoBehaviour
     public void DeactivatePopUp(){
         BaseballPopUp.SetActive(false);
         BowlingPopUp.SetActive(false);
+        ShootingPopUp.SetActive(false);
 
     }
 
