@@ -5,11 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
-   public void SceneLoader(int SceneNumber){
+    [SerializeField] private GameObject ConfPopUp = null;
+   
+
+     public void Start() {
+        DeactivatePopUp();
+     }
+    
+    public void ActivatePopUp(GameObject PopUp) {
+        DeactivatePopUp();
+
+        PopUp.SetActive(true);
+    }
+
+    public void DeactivatePopUp(){
+        ConfPopUpPopUp.SetActive(false);
+        
+    }
+
+    public void SceneLoader(int SceneNumber){
         SceneManager.LoadScene(SceneNumber);
     }
-    
+
 }
-
-
-
