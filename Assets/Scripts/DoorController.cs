@@ -19,7 +19,7 @@ public class DoorController : MonoBehaviour
     }
 
     public void DeactivatePopUp(){
-        ConfPopUpPopUp.SetActive(false);
+        ConfPopUp.SetActive(false);
         
     }
 
