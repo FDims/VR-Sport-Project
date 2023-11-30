@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomTarget : MonoBehaviour
 {
-    [SerializeField] public GameObject RandTarget = null; // Reference to the target prefab
+    [SerializeField] private GameObject RandTarget; // Reference to the target prefab
     public Vector3 initialSpawnPosition = new Vector3(0f, 0f, 0f);
     public float spawnRadius = 5f; // Radius within which the targets will spawn
 
@@ -27,7 +27,7 @@ public class RandomTarget : MonoBehaviour
 
         // Spawn a new target at the calculated position
         currentTarget = Instantiate(RandTarget, newSpawnPosition, Quaternion.identity);
-        
+
         RandTarget.SetActive(true);
     }
 
