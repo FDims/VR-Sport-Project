@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
 
         PopUp.SetActive(true);
     }
-    public void SceneLoader(string SceneNumber)
+    public void SceneLoader(int SceneNumber)
     {
         SceneManager.LoadScene(SceneNumber);
     }
