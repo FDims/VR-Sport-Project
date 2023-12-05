@@ -28,7 +28,7 @@ public class TargetUpDown : MonoBehaviour
         isAnimationPlaying = !isAnimationPlaying;
 
         // Set the animator parameter to control the animation
-        myAnimator.SetBool("IsPlaying", isAnimationPlaying);
+        myAnimator.SetBool("Target", isAnimationPlaying);
 
         // Optionally, you can add additional logic based on the animation state
         if (isAnimationPlaying)
