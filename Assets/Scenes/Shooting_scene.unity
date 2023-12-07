@@ -631,7 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9dac606e467946b192296a40972eac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 407448696}
 --- !u!1001 &340899861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1498,7 +1497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9dac606e467946b192296a40972eac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 407448696}
 --- !u!95 &407448699
 Animator:
   serializedVersion: 4
@@ -8612,7 +8610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4047503882683654, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6
+      value: -4.55
       objectReference: {fileID: 0}
     - target: {fileID: 4047503882683654, guid: e0d3f8289f60e1e49a5d66d5eb8582f3, type: 3}
       propertyPath: m_LocalPosition.y
