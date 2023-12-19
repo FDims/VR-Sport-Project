@@ -81,7 +81,6 @@
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"
-<<<<<<< HEAD
     },
     {
       "name": "/actions/SetUp/in/Grab",
@@ -90,8 +89,6 @@
     {
       "name": "/actions/SetUp/in/Shooting",
       "type": "boolean"
-=======
->>>>>>> parent of 9411cf4 (revert)
     }
   ],
   "action_sets": [
@@ -112,13 +109,10 @@
       "usage": "single"
     },
     {
-<<<<<<< HEAD
       "name": "/actions/SetUp",
       "usage": "single"
     },
     {
-=======
->>>>>>> parent of 9411cf4 (revert)
       "name": "/actions/NewSet",
       "usage": "single"
     }
