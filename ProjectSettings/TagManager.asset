@@ -9,6 +9,10 @@ TagManager:
   - Ball
   - Bat
   - Props
+  - LowerFloor
+  - MainFloor
+  - BowlingPin
+  - BowlingPinSet
   layers:
   - Default
   - TransparentFX
