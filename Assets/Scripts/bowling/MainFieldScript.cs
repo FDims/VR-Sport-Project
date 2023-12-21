@@ -8,7 +8,7 @@ public class MainFieldScript : MonoBehaviour
     GameObject[] balls;
     private void Update()
     {
-        if (balls.Length < 4)
+        if (balls.Length <= 4)
         {
             balls = GameObject.FindGameObjectsWithTag("Ball");
         }
