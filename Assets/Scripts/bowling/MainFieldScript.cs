@@ -6,12 +6,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class MainFieldScript : MonoBehaviour
 {
     GameObject[] balls;
+    private void Start()
+    {
+        balls = GameObject.FindGameObjectsWithTag("Ball");
+    }
     private void Update()
     {
-        if (balls.Length <= 4)
-        {
             balls = GameObject.FindGameObjectsWithTag("Ball");
-        }
     }
     private void OnCollisionStay(Collision collision)
     {
