@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7cac0f922f83945f7a28b070bee5f473
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+<<<<<<< HEAD
+  defaultReferences:
+  - m_InteractionManager: {instanceID: 0}
+  - m_CustomReticle: {instanceID: 0}
+  - m_AttachTransform: {instanceID: 0}
+  - bulletPrefab: {fileID: 5493139521785062958, guid: 331ea9e084bdf45fcb22df5cf5447a4d,
+      type: 3}
+  - barrelTransform: {instanceID: 0}
+=======
+  defaultReferences: []
+>>>>>>> parent of 9411cf4 (revert)
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
