@@ -12,20 +12,12 @@ public class RandomTarget : MonoBehaviour
 
     public void Start()
     {
-<<<<<<< HEAD
         //DeactivateSpawnTarget();
-=======
-        DeactivateSpawnTarget();
->>>>>>> parent of 9411cf4 (revert)
     }
 
     public void SpawnTarget()
     {
-<<<<<<< HEAD
         //DeactivateSpawnTarget();
-=======
-        DeactivateSpawnTarget();
->>>>>>> parent of 9411cf4 (revert)
         // Generate a random offset within the specified spawn radius
         Vector3 randomOffset = Random.insideUnitSphere * spawnRadius;
         // randomOffset.y = 0; // Ensure targets spawn on the same level
@@ -36,21 +28,12 @@ public class RandomTarget : MonoBehaviour
         // Spawn a new target at the calculated position
         currentTarget = Instantiate(RandTarget, newSpawnPosition, Quaternion.identity);
 
-<<<<<<< HEAD
         //RandTarget.SetActive(true);
     }
 
     //public void DeactivateSpawnTarget(){
     //    RandTarget.SetActive(false);
     //}
-=======
-        RandTarget.SetActive(true);
-    }
-
-    public void DeactivateSpawnTarget(){
-        RandTarget.SetActive(false);
-    }
->>>>>>> parent of 9411cf4 (revert)
     public void OnTriggerEnter(Collider other)
     {
         // Check if the collider is the target
