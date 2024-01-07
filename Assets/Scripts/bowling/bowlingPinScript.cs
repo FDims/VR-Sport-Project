@@ -5,15 +5,16 @@ using UnityEngine;
 public class bowlingPinScript : MonoBehaviour
 {
     private bool pinDown = false;
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag== "LowerFloor"|| collision.gameObject.tag == "MainFloor")
+        if (other.gameObject.CompareTag("LowerFloor") || other.gameObject.CompareTag("MainFloor"))
         {
             pinDown = true;
         }
         else
         {
-            pinDown=false;
+            pinDown = false;
         }
     }
     public void destroyPin()

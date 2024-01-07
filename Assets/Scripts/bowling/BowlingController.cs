@@ -16,8 +16,8 @@ public class BowlingController : MonoBehaviour
     private GameObject Pinset;
     private GameObject[] Pins;
     private GameObject[] balls;
-    private bool slideUp = false;
-    private bool slideDown = false;
+    public bool slideUp = false;
+    public bool slideDown = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -107,26 +107,20 @@ public class BowlingController : MonoBehaviour
     {
         Vector3 goal = new Vector3(9.38f, 0f, 2.08f);
         float dist = Vector3.Distance(transform.position, goal);
-        if (dist > 0f)
+        slider.transform.position = Vector3.MoveTowards(slider.transform.position, goal, sliderSpeed * Time.deltaTime);
+        if(dist<= 0f)
         {
-            slider.transform.position = Vector3.MoveTowards(slider.transform.position, goal, sliderSpeed * Time.deltaTime);
-        }
-        else
-        {
-            slideDown=false;
+            slideDown = false;
         }
     }
     public void sliderUp()
     {
         Vector3 goal = new Vector3(9.38f, 2.04f, 2.08f);
         float dist = Vector3.Distance(transform.position, goal);
-        if (dist > 0f)
+        slider.transform.position = Vector3.MoveTowards(slider.transform.position, goal, sliderSpeed * Time.deltaTime);
+        if (dist <= 0f)
         {
-            slider.transform.position = Vector3.MoveTowards(slider.transform.position, goal, sliderSpeed * Time.deltaTime);
-        }
-        else
-        {
-            slideUp=false;
+            slideUp = false;
         }
     }
 }
