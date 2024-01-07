@@ -106,9 +106,8 @@ public class BowlingController : MonoBehaviour
     public void sliderDown()
     {
         Vector3 goal = new Vector3(9.38f, 0f, 2.08f);
-        float dist = Vector3.Distance(transform.position, goal);
         slider.transform.position = Vector3.MoveTowards(slider.transform.position, goal, sliderSpeed * Time.deltaTime);
-        if(dist<= 0f)
+        if(slider.transform.position == goal)
         {
             slideDown = false;
         }
@@ -116,9 +115,8 @@ public class BowlingController : MonoBehaviour
     public void sliderUp()
     {
         Vector3 goal = new Vector3(9.38f, 2.04f, 2.08f);
-        float dist = Vector3.Distance(transform.position, goal);
         slider.transform.position = Vector3.MoveTowards(slider.transform.position, goal, sliderSpeed * Time.deltaTime);
-        if (dist <= 0f)
+        if (slider.transform.position == goal)
         {
             slideUp = false;
         }
