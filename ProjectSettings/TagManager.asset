@@ -13,7 +13,11 @@ TagManager:
   - MainFloor
   - BowlingPin
   - BowlingPinSet
+<<<<<<< Updated upstream
   - Bullet
+=======
+  - BowlingSideField
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
