@@ -96,7 +96,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2700635911664503484}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0e24f4c51fb721441a0c226207077328, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideFx: {fileID: 7396766185729629696}
   hitFx: {fileID: -8730921857000544902}
-  additionalVelocity: {x: 10, y: 0, z: 0}
+  additionalVelocity: {x: 6, y: 0, z: 0}
 --- !u!82 &7396766185729629696
 AudioSource:
   m_ObjectHideFlags: 0

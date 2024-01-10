@@ -36,7 +36,7 @@ public class BowlingBallScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+   /* private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("MainFloor") || collision.gameObject.CompareTag("BowlingSideField"))
         {
@@ -46,5 +46,5 @@ public class BowlingBallScript : MonoBehaviour
             }
         }
 
-    }
+    }*/
 }
