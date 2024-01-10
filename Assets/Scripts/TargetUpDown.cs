@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class TargetUpDown : MonoBehaviour
     {
-    [SerializeField] private GameObject Target = null;
+    //[SerializeField] private GameObject Target = null;
     private Animator myAnimator;
     private bool isAnimationPlaying = false;
 
     public void Start()
     {
-        
         // Get the Animator component attached to the same GameObject
         myAnimator = GetComponent<Animator>();
-        DeactivateTarget();
+    //    DeactivateTarget();
     }
 
-    public void DeactivateTarget(){
-       Target.SetActive(false);
-    }
+    //public void DeactivateTarget(){
+    //    Target.SetActive(false);
+    //}
 
     public void ToggleAnimation()
     {
     //    DeactivateTarget();
 
-        Target.SetActive(true);
-        
+    //    Target.SetActive(true);
         // Toggle the animation state
         isAnimationPlaying = !isAnimationPlaying;
 
