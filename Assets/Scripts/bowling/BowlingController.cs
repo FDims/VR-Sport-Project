@@ -55,15 +55,13 @@ public class BowlingController : MonoBehaviour
     {
         slideDown = true;
         if (throwCount>=2) {
-            Invoke("pinCheck", 1);
+            Invoke("pinCheck", 2);
             Invoke("restart",3);
-            throwCount = 0;
         }
         else
         { 
             Invoke("pinCheck", 3);
         }
-        slideUp = true;
         for (int i = 0; i < balls.Length; i++)
         {
             XRGrabInteractable toEnable = balls[i].GetComponent<XRGrabInteractable>();
@@ -78,25 +76,39 @@ public class BowlingController : MonoBehaviour
     public void restart()
     {
         throwCount = 0;
-        score = new float[] { 0, 0 };
         Pinset = GameObject.FindGameObjectWithTag("BowlingPinSet");
         Destroy(Pinset);
         initPIn();
+        score = new float[] { 0, 0 };
+        slideDown = false;
+        slideUp = true;
     }
 
     public void pinCheck()
     {
-        Pins = GameObject.FindGameObjectsWithTag("BownlingPin");
-        for(int i = 0; i < Pins.Length; i++)
+        Pins = GameObject.FindGameObjectsWithTag("BowlingPin");
+        scoreText[throwCount - 1].text = "0";
+        for (int i = 0; i < Pins.Length; i++)
         {
-            score[throwCount - 1]++;
             bowlingPinScript pinScript = Pins[i].GetComponent<bowlingPinScript>();
             if (pinScript != null) 
             {
                 pinScript.destroyPin();
+                if(pinScript.pinDown)
+                    score[throwCount - 1]++;
             }
         }
         scoreText[throwCount - 1].text= score[throwCount - 1].ToString();
+        if (throwCount == 1)
+            scoreText[1].text = "0";
+        if (throwCount == 1 && score[0] == 10)
+            restart();
+        else
+        {
+            slideDown = false;
+            slideUp = true;
+        }
+
     }
 
     //init Props

@@ -588,10 +588,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Bowling_Pin_01 (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 1241879987411364, guid: 06d867a51f9398d4b8e475efa64e1e57, type: 3}
-      propertyPath: m_TagString
-      value: BowlingPin
-      objectReference: {fileID: 0}
     - target: {fileID: 4513143212711100, guid: 06d867a51f9398d4b8e475efa64e1e57, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -654,10 +650,6 @@ PrefabInstance:
     - target: {fileID: 1241879987411364, guid: 06d867a51f9398d4b8e475efa64e1e57, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Bowling_Pin_01 (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241879987411364, guid: 06d867a51f9398d4b8e475efa64e1e57, type: 3}
-      propertyPath: m_TagString
-      value: BowlingPin
       objectReference: {fileID: 0}
     - target: {fileID: 4513143212711100, guid: 06d867a51f9398d4b8e475efa64e1e57, type: 3}
       propertyPath: m_RootOrder

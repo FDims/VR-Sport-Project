@@ -18,14 +18,13 @@ public class BowlingBallScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("MainFloor")|| collision.gameObject.CompareTag("BowlingSideField"))
+        if (collision.gameObject.CompareTag("MainFloor") || collision.gameObject.CompareTag("BowlingSideField"))
         {
             if (rb.velocity.magnitude <= 3f)
             {
                 rb.velocity += additionalVelocity;
             }
         }
-
         if (collision.gameObject.CompareTag("MainFloor"))
         {
             slideFx.Play();
@@ -35,5 +34,17 @@ public class BowlingBallScript : MonoBehaviour
             hitFx.time = startHit;
             hitFx.Play();
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("MainFloor") || collision.gameObject.CompareTag("BowlingSideField"))
+        {
+            if (rb.velocity.magnitude <= 3f)
+            {
+                rb.velocity += additionalVelocity;
+            }
+        }
+
     }
 }

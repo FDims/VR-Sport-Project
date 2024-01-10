@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Baseball_scene.unity
     guid: 4af6255e744d4664ba2d86ffc0dff536
+  - enabled: 1
+    path: Assets/Scenes/Bowling_Scene.unity
+    guid: 3deebdb4c16057040a9fce4267c276e4
+  - enabled: 1
+    path: Assets/Scenes/Shooting_scene.unity
+    guid: 668effdb1061f4189a5530357e587331
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

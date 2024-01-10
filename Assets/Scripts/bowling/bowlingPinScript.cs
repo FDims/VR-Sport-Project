@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class bowlingPinScript : MonoBehaviour
 {
-    private bool pinDown = false;
+    public bool pinDown = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("LowerFloor") || other.gameObject.CompareTag("MainFloor"))
-        {
-            pinDown = true;
-        }
-        else
-        {
-            pinDown = false;
-        }
-    }
     public void destroyPin()
     {
+        pinStatus();
         if(pinDown)
         {
             Destroy(gameObject);
         }
     }
-
+    public void pinStatus()
+    {
+        float angle = Vector3.Angle(Vector3.up, transform.up);
+        if (angle>= 20f)
+            pinDown = true;
+    }
 }
