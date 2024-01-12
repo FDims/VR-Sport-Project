@@ -11,10 +11,10 @@ public class TargetSpawner : MonoBehaviour
         DeactivateTarget();
      }
     
-    public void ActivateTarget(GameObject Target) {
+    public void ActivateTarget(GameObject RandTarget) {
         DeactivateTarget();
 
-        Target.SetActive(true);
+        RandTarget.SetActive(true);
     }
 
     public void DeactivateTarget(){
