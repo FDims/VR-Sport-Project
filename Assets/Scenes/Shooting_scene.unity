@@ -2377,7 +2377,7 @@ MonoBehaviour:
     type: 3}
   barrelTransform: {fileID: 28567131}
   bulletSpeed: 35
-  shootSound: {fileID: 8300000, guid: 0731f4032ca96472fa89333432bac16a, type: 3}
+  shootSound: {fileID: 8300000, guid: 089eb773b2b85414780f42378d73adc2, type: 3}
 --- !u!82 &561781531
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2388,7 +2388,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0731f4032ca96472fa89333432bac16a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 089eb773b2b85414780f42378d73adc2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8822,7 +8822,7 @@ MonoBehaviour:
     type: 3}
   barrelTransform: {fileID: 1211038290}
   bulletSpeed: 35
-  shootSound: {fileID: 8300000, guid: 0731f4032ca96472fa89333432bac16a, type: 3}
+  shootSound: {fileID: 8300000, guid: 089eb773b2b85414780f42378d73adc2, type: 3}
 --- !u!114 &1644225738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8848,7 +8848,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0731f4032ca96472fa89333432bac16a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 089eb773b2b85414780f42378d73adc2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
