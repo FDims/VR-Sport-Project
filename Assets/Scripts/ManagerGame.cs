@@ -5,57 +5,62 @@ using TMPro;
 
 public class ManagerGame : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI timerText;      // UI Text to display the timer
-    [SerializeField] private TextMeshProUGUI scoreText;      // UI Text to display the total score
-    public float gameTime = 30f; // Total game time in seconds
-    private float timer;         // Current timer value
-    private bool gameActive;     // Flag to indicate if the game is active
-    private int totalScore;      // Total score accumulated during the game
-    [SerializeField] private GameObject RandTarget = null;  // Corrected variable name
-     private  Vector3 targetSpawnPosition = new Vector3(-3.9f, 1.33f, 0.43f);
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    public float gameTime = 30f;
+    private float timer;
+    private bool gameActive;
+    private int totalScore;
+    [SerializeField] private Transform spawnPoint;
+    private Vector3 targetSpawnPosition = new Vector3(-3.9f, 1.33f, 0.43f);
+
+    // Declare the prefab to be used
+    [SerializeField] private GameObject randTargetPrefab = null;
+
+    private GameObject randTarget;
 
     public void Start()
     {
         DeactivateTarget();
-        // Initialize the UI
         timerText.text = "Time: " + gameTime.ToString("F1");
         scoreText.text = "Score: 0";
     }
 
-     public void ActivateTarget(GameObject Target) {
+    public void ActivateTarget(GameObject targetPrefab)
+    {
         DeactivateTarget();
 
-         // Check if there's already a target in the scene
-    if (RandTarget == null)
-    {
-        // Instantiate a new target or activate a pre-existing one
-        RandTarget = Instantiate(RandTarget, targetSpawnPosition, Quaternion.identity);
+        // Check if there's already a target in the scene
+        if (randTarget == null)
+        {
+            // Instantiate a new target or activate a pre-existing one
+            randTarget = Instantiate(targetPrefab, targetSpawnPosition, spawnPoint.rotation);
+        }
+
+        randTarget.SetActive(true);
     }
 
-        Target.SetActive(true);
-    }
-        public void DeactivateTarget(){
-        RandTarget.SetActive(false);
-        
+    public void DeactivateTarget()
+    {
+        if (randTarget != null)
+        {
+            randTarget.SetActive(false);
+        }
     }
 
     public void Update()
     {
-        // Update the timer if the game is active
         if (gameActive)
         {
             timer -= Time.deltaTime;
 
-            // Check if the timer has reached zero
             if (timer <= 0f)
             {
                 gameActive = false;
                 timer = 0f;
-                // Optionally, you can perform end-of-game actions here
                 DisplayEndGame();
             }
 
-            // Update the UI
             timerText.text = "Time: " + timer.ToString("F1");
         }
     }
@@ -71,15 +76,14 @@ public class ManagerGame : MonoBehaviour
         gameActive = true;
 
         // Optionally, you can perform start-of-game actions here
-        ActivateTarget(RandTarget);
+        ActivateTarget(randTargetPrefab);
     }
 
     public void DisplayEndGame()
 {
-    // Display the final score
     scoreText.text = "Total Score: " + totalScore;
 
-    // Find and destroy all GameObjects with the tag "YourTargetTag"
+    // Find all GameObjects with the tag "YourTargetTag"
     GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
 
     foreach (GameObject target in targets)
@@ -88,15 +92,16 @@ public class ManagerGame : MonoBehaviour
     }
 }
 
+  public void TargetHit(int points)
+{
+    // Update the total score
+    totalScore += points;
+    scoreText.text = "Score: " + totalScore;
 
-    // This method is called when a target is hit (assuming your Target script calls this method)
-    public void TargetHit(int points)
-    {
-        // Update the total score
-        totalScore += points;
+    // Deactivate the current target
+    DeactivateTarget();
 
-        // Update the UI
-        scoreText.text = "Score: " + totalScore;
-    }
-
+    // Activate a new target
+    ActivateTarget(randTargetPrefab);
+}
 }

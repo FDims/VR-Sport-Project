@@ -4339,7 +4339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1049280226
 Transform:
   m_ObjectHideFlags: 0
@@ -7523,7 +7523,9 @@ MonoBehaviour:
   timerText: {fileID: 1721789810}
   scoreText: {fileID: 889434790}
   gameTime: 30
-  RandTarget: {fileID: 2141816266}
+  spawnPoint: {fileID: 1049280226}
+  randTargetPrefab: {fileID: 2572539417971811752, guid: cef332dc15b1e46bb9159df77ef920a4,
+    type: 3}
 --- !u!1 &1367590588
 GameObject:
   m_ObjectHideFlags: 0
@@ -18996,7 +18998,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959305367}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -339.64005}
+  m_LocalPosition: {x: 0, y: 0, z: -339.64017}
   m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19007,7 +19009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.31003055, y: 222.18}
+  m_AnchoredPosition: {x: -0.31015015, y: 222.18}
   m_SizeDelta: {x: 682.5, y: 447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959305369
@@ -19300,6 +19302,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1049280226}
     m_Modifications:
+    - target: {fileID: 2253251543453681851, guid: cef332dc15b1e46bb9159df77ef920a4,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1049280226}
     - target: {fileID: 2572539417971811752, guid: cef332dc15b1e46bb9159df77ef920a4,
         type: 3}
       propertyPath: m_Name
@@ -19394,7 +19401,7 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 2545576388282264640, guid: cef332dc15b1e46bb9159df77ef920a4, type: 3}
     - {fileID: 2573584598691788477, guid: cef332dc15b1e46bb9159df77ef920a4, type: 3}
-    - {fileID: -1383682778962764529, guid: cef332dc15b1e46bb9159df77ef920a4, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cef332dc15b1e46bb9159df77ef920a4, type: 3}
 --- !u!4 &2141816265 stripped
 Transform:
@@ -19402,28 +19409,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2141816264}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2141816266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2572539417971811752, guid: cef332dc15b1e46bb9159df77ef920a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2141816264}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2141816267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141816266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8736ec2aa71864d9c92551e6f42659f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RandTarget: {fileID: 2141816266}
-  spawnPoint: {fileID: 1049280226}
-  spawnAreaSize: 1
-  hitSound: {fileID: 8300000, guid: 1a8eb5fa6ed994cf79b48453305e421d, type: 3}
 --- !u!1001 &5118793316973936299
 PrefabInstance:
   m_ObjectHideFlags: 0
