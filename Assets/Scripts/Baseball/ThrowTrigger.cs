@@ -20,11 +20,11 @@ public class ThrowTrigger : MonoBehaviour
         throwerController = thrower.GetComponent<ThrowerController>();
         isActivated = false;
         timeDelay = delayWindow;
+        timerText.text = timeDelay.ToString();
     }
     private void Update()
     {
         timeDelay -= Time.deltaTime;
-        timerText.text = timeDelay.ToString();
         if (isActivated && timeDelay<=0)
         {
             timeDelay = delayWindow;
@@ -43,6 +43,17 @@ public class ThrowTrigger : MonoBehaviour
         {
             switchObject.transform.Rotate(60f, 0f, 0f, Space.Self);
         }
+    }
+
+    public void timerUp()
+    {
+        timeDelay++;
+        timerText.text = timeDelay.ToString();
+    }
+    public void timerDown()
+    {
+        timeDelay--;
+        timerText.text = timeDelay.ToString();
     }
 
 
