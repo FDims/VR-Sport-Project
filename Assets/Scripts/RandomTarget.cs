@@ -6,8 +6,9 @@ public class RandomTarget : MonoBehaviour
 {
     [SerializeField] private GameObject RandTarget;
     
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float spawnAreaSize;
+    [SerializeField] private Transform[] spawnPoint;
+    [SerializeField] private float[] areaPoint;
+   
     public AudioClip hitSound;  
 
     private Vector3 spawnPosition;
@@ -27,13 +28,14 @@ public class RandomTarget : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             manager.TargetHit(100);
-            spawnPosition = spawnPoint.position;
-            spawnPosition.x += Random.Range (-spawnAreaSize, spawnAreaSize);
-            spawnPosition.y += Random.Range (-spawnAreaSize/2, spawnAreaSize/2);
-            spawnPosition.z += Random.Range (-spawnAreaSize, spawnAreaSize);
+            int n = Random.Range(1,3);
+            spawnPosition = spawnPoint[n].position;
+            spawnPosition.x += Random.Range (-areaPoint[n], areaPoint[n]);
+            spawnPosition.y += Random.Range (-areaPoint[n], areaPoint[n]);
+            spawnPosition.z += Random.Range (-areaPoint[n], areaPoint[n]);
             
             // Handle the hit (e.g., despawn and respawn)
-            Instantiate(RandTarget, spawnPosition, spawnPoint.rotation);
+            Instantiate(RandTarget, spawnPosition, spawnPoint[n].rotation);
             Destroy(gameObject);
             
 

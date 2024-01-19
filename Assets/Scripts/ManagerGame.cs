@@ -33,8 +33,10 @@ public class ManagerGame : MonoBehaviour
         // Check if there's already a target in the scene
         if (randTarget == null)
         {
+            Vector3 spawnPoint2 = new Vector3 (targetSpawnPosition.x-2,targetSpawnPosition.y,targetSpawnPosition.z);
             // Instantiate a new target or activate a pre-existing one
             randTarget = Instantiate(targetPrefab, targetSpawnPosition, spawnPoint.rotation);
+            randTarget = Instantiate(targetPrefab, spawnPoint2, spawnPoint.rotation);
         }
 
         randTarget.SetActive(true);
@@ -98,10 +100,6 @@ public class ManagerGame : MonoBehaviour
     totalScore += points;
     scoreText.text = "Score: " + totalScore;
 
-    // Deactivate the current target
-    DeactivateTarget();
+} 
 
-    // Activate a new target
-    ActivateTarget(randTargetPrefab);
-}
 }
