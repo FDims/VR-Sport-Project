@@ -28,7 +28,7 @@ public class RandomTarget : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             manager.TargetHit(100);
-            int n = Random.Range(1,3);
+            int n = Random.Range(0,2);
             spawnPosition = spawnPoint[n].position;
             spawnPosition.x += Random.Range (-1, 1);
             spawnPosition.y += Random.Range (-1, 1);
