@@ -30,8 +30,8 @@ public class RandomTarget : MonoBehaviour
             manager.TargetHit(100);
             int n = Random.Range(1,3);
             spawnPosition = spawnPoint[n].position;
-            spawnPosition.x += Random.Range (-areaPoint[n], areaPoint[n]);
-            spawnPosition.y += Random.Range (-areaPoint[n], areaPoint[n]);
+            spawnPosition.x += Random.Range (-1, 1);
+            spawnPosition.y += Random.Range (-1, 1);
             spawnPosition.z += Random.Range (-areaPoint[n], areaPoint[n]);
             
             // Handle the hit (e.g., despawn and respawn)

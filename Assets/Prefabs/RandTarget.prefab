@@ -207,8 +207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandTarget: {fileID: 2572539417971811752}
-  spawnPoint: {fileID: 2574181708231483762}
-  spawnAreaSize: 1
+  spawnPoint:
+  - {fileID: 0}
+  areaPoint: []
   hitSound: {fileID: 8300000, guid: 1a8eb5fa6ed994cf79b48453305e421d, type: 3}
 --- !u!1 &2573584600027979282
 GameObject:
