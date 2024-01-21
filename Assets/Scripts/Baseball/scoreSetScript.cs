@@ -13,7 +13,7 @@ public class scoreSetScript : MonoBehaviour
     {
         if (other.CompareTag("Ball")) {
             scoreText.text = Score.ToString();
-            Destroy(other.gameObject);
+            other.gameObject.tag = "Untagged";
         }
     }
 }

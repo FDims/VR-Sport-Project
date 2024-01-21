@@ -13,7 +13,7 @@ public class baseballBat_script : MonoBehaviour
         {
             batHit.Play();
         }
-        else
+        else if(collision.gameObject.tag != "Props")
         {
             batDrop.Play();
         }

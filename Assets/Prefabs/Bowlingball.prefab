@@ -110,7 +110,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2700635911664503484}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 250
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -228,7 +228,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 5
+  m_ThrowVelocityScale: 2
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 1
   m_RetainTransformParent: 1
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideFx: {fileID: 7396766185729629696}
   hitFx: {fileID: -8730921857000544902}
-  additionalVelocity: {x: 5, y: 0, z: 0}
+  additionalVelocity: {x: 2, y: 0, z: 0}
 --- !u!82 &7396766185729629696
 AudioSource:
   m_ObjectHideFlags: 0

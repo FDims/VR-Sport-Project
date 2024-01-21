@@ -11,7 +11,6 @@ public class BowlingBallScript : MonoBehaviour
     public Vector3 additionalVelocity = new Vector3(5f, 0f, 0f); // Additional velocity to be added
 
     private float startHit = 2.7f;
-    private float endHit = 4.6f;
     private void Start()
     {
         rb=GetComponent<Rigidbody>();
@@ -36,15 +35,5 @@ public class BowlingBallScript : MonoBehaviour
         }
     }
 
-   /* private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("MainFloor") || collision.gameObject.CompareTag("BowlingSideField"))
-        {
-            if (rb.velocity.magnitude <= 3f)
-            {
-                rb.velocity += additionalVelocity;
-            }
-        }
 
-    }*/
 }

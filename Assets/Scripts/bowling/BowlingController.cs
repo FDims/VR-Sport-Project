@@ -81,7 +81,7 @@ public class BowlingController : MonoBehaviour
         initPIn();
         score = new float[] { 0, 0 };
         slideDown = false;
-        slideUp = true;
+        Invoke("setSlideUpTrue", 2);
     }
 
     public void pinCheck()
@@ -106,7 +106,7 @@ public class BowlingController : MonoBehaviour
         else
         {
             slideDown = false;
-            slideUp = true;
+            Invoke("setSlideUpTrue", 2);
         }
 
     }
@@ -121,6 +121,11 @@ public class BowlingController : MonoBehaviour
         Instantiate(BallPrefab,traySpawnPoint.transform.position, Quaternion.identity);
     }
 
+    //helper function to make delay
+    public void setSlideUpTrue()
+    {
+        slideUp = true;
+    }
 
     //slider move
     public void sliderDown()
