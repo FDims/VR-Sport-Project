@@ -1,31 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
+
 
 public class TutorialScript : MonoBehaviour
 {   
     [SerializeField] private GameObject ControllerGuide = null;
     [SerializeField] private GameObject Tutorial_1 = null;
-    [SerializeField] private GameObject Tutorial_2 = null;
-  
-  
-    
-    public void ChangeC2T1(){
+
+
+    public void Start()
+    {
+        ActivatePopUp();
+    }
+    public void DeactivateController()
+    {
         ControllerGuide.SetActive(false);
-        ActivatePopUp(Tutorial_1);
     }
-
-    public void ChangeT12T2(){
+     public void DeactivateTutorial()
+    {
         Tutorial_1.SetActive(false);
-        ActivatePopUp(Tutorial_2);
     }
-    public void RemoveT2(){
-        Tutorial_2.SetActive(false);
-    }
+    public void ActivatePopUp()
+    {
+        ControllerGuide.SetActive(false);
 
-    public void ActivatePopUp(GameObject PopUp) {
+        ControllerGuide.SetActive(true);
+    }
     
-        PopUp.SetActive(true);
-    }
-
 }
+
