@@ -6,12 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ThrowTrigger : MonoBehaviour
 {
-    public bool isActivated = false; // Initial state of the button
     [SerializeField] GameObject thrower;
     [SerializeField] GameObject switchObject;
     [SerializeField] private float delayWindow = 5f;
     [SerializeField] TextMeshProUGUI timerText;
 
+    private bool isActivated = false; // Initial state of the button
     private ThrowerController throwerController;
     private float timeDelay = 0f;
 
@@ -47,12 +47,12 @@ public class ThrowTrigger : MonoBehaviour
 
     public void timerUp()
     {
-        timeDelay++;
+        timeDelay += 1;
         timerText.text = timeDelay.ToString();
     }
     public void timerDown()
     {
-        timeDelay--;
+        timeDelay -= 1;
         timerText.text = timeDelay.ToString();
     }
 
