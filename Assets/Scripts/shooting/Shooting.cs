@@ -8,14 +8,14 @@ public class Shooting : XRGrabInteractable
     public GameObject bulletPrefab;
     public Transform barrelTransform;
     public float bulletSpeed = 10f;
-    public AudioClip shootSound;
+    public AudioSource shootSound;
 
     
     
     public void Shoot()
     {
          // Play the shoot sound effect
-        AudioSource.PlayClipAtPoint(shootSound, transform.position);
+        shootSound.Play();
         
         // Instantiate a bullet at the barrel position and rotation
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.position, barrelTransform.rotation);

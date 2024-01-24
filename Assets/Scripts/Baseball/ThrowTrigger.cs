@@ -1,5 +1,3 @@
-
-using UnityEditor.Timeline;
 using UnityEngine;
 using TMPro;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -8,7 +6,7 @@ public class ThrowTrigger : MonoBehaviour
 {
     [SerializeField] GameObject thrower;
     [SerializeField] GameObject switchObject;
-    [SerializeField] private float delayWindow = 5f;
+    [SerializeField] private float delayWindow = 7f;
     [SerializeField] TextMeshProUGUI timerText;
 
     private bool isActivated = false; // Initial state of the button
@@ -47,13 +45,13 @@ public class ThrowTrigger : MonoBehaviour
 
     public void timerUp()
     {
-        timeDelay += 1;
-        timerText.text = timeDelay.ToString();
+        delayWindow += 1f;
+        timerText.text = delayWindow .ToString();
     }
     public void timerDown()
     {
-        timeDelay -= 1;
-        timerText.text = timeDelay.ToString();
+        delayWindow -= 1f;
+        timerText.text = delayWindow .ToString();
     }
 
 
