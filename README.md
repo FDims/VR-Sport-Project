@@ -23,7 +23,9 @@ Fachrial Dimas Putra Perdana
 - To Grab or Interact with interactables press the grip button of the controller (hold the grip button to keep holding the grabbables)
 - In the shooting games, press the trigger button to shoot while holding the gun with the grip button
 - To open the volume setting press the menu button and then adjust the slider and close the setting with the trigger button
-- 
+- To move use the Trackpad or analog of the left controller
+- To turn use the Trackpad or analog of the right controller
+
 # **About the Games**
 
 Upon opening you will be landed on Lobby
