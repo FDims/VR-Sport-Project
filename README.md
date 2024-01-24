@@ -1,5 +1,5 @@
 # VR-Sport-Project
-Unity-Based VR Games inspired by Wii Sport
+Unity-Based VR Games inspired by Wii Sport for Modul VR-AR WS 2023/2024 FH Aachen
 
 **created by:**
 Alexander Matthew
