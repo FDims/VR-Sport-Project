@@ -34,12 +34,15 @@ Upon opening you will be landed on Lobby
 Audio volume is customizable by pressing the menu button of the controller
 
 you can choose between one of the 3 mini games:
-![shooting button](https://github.com/FDims/VR-Sport-Porject/assets/110996703/d72759ec-cf6f-4023-87fe-8e1401d7647d)
 1. Shooting
+![shooting button](https://github.com/FDims/VR-Sport-Porject/assets/110996703/d72759ec-cf6f-4023-87fe-8e1401d7647d)
+
+3. Baseball
 ![baseball logo text](https://github.com/FDims/VR-Sport-Porject/assets/110996703/29bfc0dc-4d53-4fc2-ae13-221936985754)
-2. Baseball
-![bowling logo text](https://github.com/FDims/VR-Sport-Porject/assets/110996703/d5aab8d4-3786-451c-8a66-8361740e35fa)
+
 4. Bowling
+![bowling logo text](https://github.com/FDims/VR-Sport-Porject/assets/110996703/d5aab8d4-3786-451c-8a66-8361740e35fa)
+
 
 After choosing and confirming, you will be landed the scene of your choice and will be presented with a tutorial (only can be viewed when you get in to the scene)
 
