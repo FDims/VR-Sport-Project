@@ -9,7 +9,7 @@ public class RandomTarget : MonoBehaviour
     [SerializeField] private Transform[] spawnPoint;
     [SerializeField] private float[] areaPoint;
    
-    public AudioClip hitSound;  
+    public AudioSource hitSound;  
 
     private Vector3 spawnPosition;
 
@@ -23,7 +23,7 @@ public class RandomTarget : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        AudioSource.PlayClipAtPoint(hitSound, transform.position);
+        hitSound.Play();
 
         if (collision.gameObject.CompareTag("Bullet"))
         {

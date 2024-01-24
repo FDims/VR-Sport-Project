@@ -80,6 +80,8 @@ public class BowlingController : MonoBehaviour
         Destroy(Pinset);
         initPIn();
         score = new float[] { 0, 0 };
+	scoreText[0].text = score[0].ToString();
+	scoreText[1].text = score[1].ToString();
         slideDown = false;
         Invoke("setSlideUpTrue", 2);
     }

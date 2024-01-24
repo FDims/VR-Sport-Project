@@ -8,10 +8,10 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioMixer audioMixer;
     public InputActionProperty RshowMenu;
     public InputActionProperty LshowMenu;
-
+	
+    [SerializeField] AudioMixer audioMixer;
     [SerializeField] GameObject volumeCanvas;
     [SerializeField] Slider masterSlider;
     [SerializeField] Slider musicSlider;
@@ -28,6 +28,9 @@ public class AudioManager : MonoBehaviour
         deactivateMenu();
 
         //load saved Volume
+	masterSlider.value = 1 ;
+	musicSlider.value = 1;
+	sfxSlider.value = 1;
         loadVolume();
     }
 
@@ -68,37 +71,50 @@ public class AudioManager : MonoBehaviour
 
     private void loadVolume()
     {
-        float volumeValue = PlayerPrefs.GetFloat("masterVolume");
-        masterSlider.value = volumeValue;
-        masterVolumeText.text = volumeValue.ToString();
-        audioMixer.SetFloat("master", volumeValue);
+	float volumeValue = 0f ;
+	if(PlayerPrefs.HasKey("masterVolume")){
+       	   volumeValue = PlayerPrefs.GetFloat("masterVolume");
+	   masterSlider.value = volumeValue;
+	}else{
+	   volumeValue = masterSlider.value; 	
+        }
+        masterVolumeText.text = volumeValue.ToString("0.0");
+        audioMixer.SetFloat("master", Mathf.Log10(volumeValue)*20);
 
-        volumeValue = PlayerPrefs.GetFloat("musicVolume");
-        musicSlider.value = volumeValue;
-        musicVolumeText.text = volumeValue.ToString();
-        audioMixer.SetFloat("music", volumeValue);
+	if(PlayerPrefs.HasKey("musicVolume")){
+           volumeValue = PlayerPrefs.GetFloat("musicVolume");
+	   musicSlider.value = volumeValue;
+	}else{
+	   volumeValue = musicSlider.value;
+	}
+        musicVolumeText.text = volumeValue.ToString("0.0");
+        audioMixer.SetFloat("music", Mathf.Log10(volumeValue)*20);
 
-        volumeValue = PlayerPrefs.GetFloat("sfxVolume");
-        sfxSlider.value = volumeValue;
-        sfxVolumeText.text = volumeValue.ToString();
-        audioMixer.SetFloat("sfx", volumeValue);
+	if(PlayerPrefs.HasKey("sfxVolume")){
+           volumeValue = PlayerPrefs.GetFloat("sfxVolume");
+	   sfxSlider.value = volumeValue;
+	}else{
+	   volumeValue = sfxSlider.value;	
+        }
+        sfxVolumeText.text = volumeValue.ToString("0.0");
+        audioMixer.SetFloat("sfx", Mathf.Log10(volumeValue)*20);
     }
 
     public void updateVolume()
     {
         float volumeValue = masterSlider.value;
-        masterVolumeText.text=volumeValue.ToString();
-        audioMixer.SetFloat("master", volumeValue);
+        masterVolumeText.text=volumeValue.ToString("0.0");
+        audioMixer.SetFloat("master", Mathf.Log10(volumeValue)*20);
         PlayerPrefs.SetFloat("masterVolume",volumeValue);
 
         volumeValue = musicSlider.value;
-        musicVolumeText.text = volumeValue.ToString();
-        audioMixer.SetFloat("music", volumeValue);
+        musicVolumeText.text = volumeValue.ToString("0.0");
+        audioMixer.SetFloat("music", Mathf.Log10(volumeValue)*20);
         PlayerPrefs.SetFloat("musicVolume", volumeValue);
 
         volumeValue = sfxSlider.value;
-        sfxVolumeText.text = volumeValue.ToString();
-        audioMixer.SetFloat("sfx", volumeValue);
+        sfxVolumeText.text = volumeValue.ToString("0.0");
+        audioMixer.SetFloat("sfx", Mathf.Log10(volumeValue)*20);
         PlayerPrefs.SetFloat("sfxVolume", volumeValue);
 
 
