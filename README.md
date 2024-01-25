@@ -36,7 +36,7 @@ Audio volume is customizable by pressing the menu button of the controller
 
 you can choose between one of the 3 mini games:
 1. Shooting
-![shooting button](documentation/shooting_logo.png)
+![shooting](documentation/shooting_logo.png)
 
 3. Baseball
 ![baseball logo text](https://github.com/FDims/VR-Sport-Porject/assets/110996703/29bfc0dc-4d53-4fc2-ae13-221936985754)
