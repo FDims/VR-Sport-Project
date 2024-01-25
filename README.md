@@ -15,9 +15,10 @@ Fachrial Dimas Putra Perdana
 5. Morgue Room PBR (https://assetstore.unity.com/packages/3d/environments/morgue-room-pbr-65817#content)
 
 **Unity Packages:**
-1. XR Interaction Toolkit (https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.5/manual/index.html)
-2. XR Plugin Management (https://docs.unity3d.com/Manual/com.unity.xr.management.html)
-3. Open XR Plugin (https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.8/manual/index.html)
+1. XR Interaction Toolkit 2.0.4 (https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.5/manual/index.html)
+2. XR Plugin Management 4.4.0 (https://docs.unity3d.com/Manual/com.unity.xr.management.html)
+3. Open XR Plugin 1.4.2 (https://docs.unity3d.com/Packages/com.unity.xr.openxr@1.8/manual/index.html)
+Note: if you have OpenVR XR installed please deactivate it, in Edit > Project Settings > XR Plug-in Management > uncheck OpenVR XR
 
 # **Controller instructions:**
 - To Grab or Interact with interactables press the grip button of the controller (hold the grip button to keep holding the grabbables)
@@ -35,7 +36,7 @@ Audio volume is customizable by pressing the menu button of the controller
 
 you can choose between one of the 3 mini games:
 1. Shooting
-![shooting button](https://github.com/FDims/VR-Sport-Porject/assets/110996703/d72759ec-cf6f-4023-87fe-8e1401d7647d)
+![shooting button](documentation/shooting_logo.png)
 
 3. Baseball
 ![baseball logo text](https://github.com/FDims/VR-Sport-Porject/assets/110996703/29bfc0dc-4d53-4fc2-ae13-221936985754)
